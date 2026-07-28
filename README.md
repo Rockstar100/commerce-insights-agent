@@ -2,20 +2,28 @@
 
 An AI-powered analytics and automation assistant for e-commerce and digital marketing teams. It connects a conversational LangGraph agent to the platforms marketers actually work in — Shopify, Meta Ads, Google Ads, Google Analytics, Google Search Console, and SEMrush — so users can ask questions in plain language and get answers pulled live from those systems.
 
+## Screenshots
+
+| Landing page | Sign in |
+|---|---|
+| ![Landing page](public/screenshots/landing.png) | ![Sign in modal](public/screenshots/sign-up-modal.png) |
+
+The dashboard and chat views sit behind Clerk authentication, so they aren't captured here — connect your own Clerk/Convex/API keys and sign in locally to see them (`npm run dev`, then visit `/dashboard`).
+
 ## What it does
 
-- **Conversational agent** built with LangChain/LangGraph, backed by Anthropic and OpenAI models
-- **Tool-calling integrations** for:
-  - Shopify (orders, products, customers)
-  - Meta Ads (campaign/ad performance, active ads)
-  - Google Ads
-  - Google Analytics
-  - Google Search Console
-  - SEMrush
-- **Media tools** for transcription (Whisper) and file/document analysis
-- **Chat history & persistence** via Convex
-- **Authentication** via Clerk, with OAuth flows for connected ad/analytics accounts
-- **Vector search** via Pinecone for retrieval-augmented context
+- **Conversational agent** built with LangChain/LangGraph, backed by Anthropic and OpenAI models, that decides which tool to call based on the user's question
+- **Tool-calling integrations**:
+  - **Shopify** — look up orders, products, and customer details without leaving the chat
+  - **Meta Ads** — pull campaign/ad-set/ad performance and check which ads are currently active
+  - **Google Ads** — campaign performance and account-level reporting
+  - **Google Analytics** — traffic and behavior metrics
+  - **Google Search Console** — search performance and indexing data
+  - **SEMrush** — competitive/SEO metrics
+- **Media tools** — transcribe audio/video (Whisper) and analyze uploaded documents/files
+- **Chat history & persistence** via Convex, so conversations survive a refresh
+- **Authentication** via Clerk, including OAuth connect flows for the ad/analytics accounts above
+- **Vector search** via Pinecone for retrieval-augmented context on longer documents
 
 ## Tech stack
 
