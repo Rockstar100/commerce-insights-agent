@@ -49,7 +49,6 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 You'll need API credentials for the services you want to connect (Anthropic/OpenAI, Convex, Clerk, Pinecone, and any of the ad/analytics platforms above) configured as environment variables — see `.env.local` (not committed).
 
 ## Project structure
-
 ```
 app/            Next.js routes (dashboard, chat, auth callbacks, API routes)
 lib/tools/      Tool implementations the agent can call (Shopify, Meta, Google Ads, etc.)
